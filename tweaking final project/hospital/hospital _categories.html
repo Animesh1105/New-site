@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hospital</title>
+  <link rel="stylesheet" href="hospital list.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Libre+Baskerville:wght@700&family=Tektur:wght@600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="container-header">
+    <div onclick="window.location.href='/index.html';"class="logo">
+      24LOCAL
+    </div>
+    <!-- searchbar -->
+    <div class="search-container">
+      <div class="search-icon">
+        <img src="/images/search.svg" alt="">
+      </div>
+      <input type="text" class="search-input" placeholder="Search...">
+    </div>
+
+    <!-- Login -->
+    <form>
+      <button formaction="/Login/Login.html" class="login">Login</button>
+    </form>
+  </div>
+  <div class="navbar">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="hospital _categories.html">Hospitals</a></li>
+    <li><a href="/School/school.html">Schools</a></li>
+    <li><a href="/flight.html">Flight Booking</a></li>
+    <li><a href="">About Us</a></li>
+  </div>
+  <section class="sec">
+    <div class="categories">
+      <div class="card">
+        <div class="img"><img src="assets/images/gynecology.svg" alt=""></div>
+        <div class="desc"> Gynecology</div>
+      </div>
+      <div onclick="window.location.href='hospital list.html';" class="card">
+        <div class="img"><img src="assets/images/cardio.svg" alt=""></div>
+        <div class="desc"> Cardiology</div>
+      </div>
+      <div class="card">
+        <div class="img"><img src="assets/images/neurology.svg" alt=""></div>
+        <div class="desc"> Neurology</div>
+      </div>
+      <div class="card">
+        <div class="img"><img src="assets/images/gastro.svg" alt=""></div>
+        <div class="desc"> Gastroenterology</div>
+      </div>
+      <div class="card">
+        <div class="img"><img src="assets/images/orthopaedic.svg" alt=""></div>
+        <div class="desc"> Orthopaedic</div>
+      </div>
+    </div>
+  </section>
+  <section class="sec2">
+    <div class="categories">
+      <div class="card">
+        <div class="img"><img src="assets/images/gynecology.svg" alt=""></div>
+        <div class="desc"> Urology</div>
+      </div>
+      <div class="card">
+        <div class="img"><img src="assets/images/plasticsurgery.svg" alt=""></div>
+        <div class="desc"> Plastic Surgery</div>
+      </div>
+      <div class="card">
+        <div class="img"><img src="assets/images/ent.svg" alt=""></div>
+        <div class="desc"> "ENT (Ear, Nose, Throat)"</div>
+      </div>
+      <div class="card">
+        <div class="img"><img src="assets/images/vascularsurgery.svg" alt=""></div>
+        <div class="desc"> Vascular Surgery</div>
+      </div>
+      <div class="card">
+        <div class="img"><img src="assets/images/radiology.svg" alt=""></div>
+        <div class="desc"> Radiology</div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
