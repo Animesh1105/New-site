@@ -22,7 +22,10 @@ nav {
 }
 
 nav h1 {
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Anton', sans-serif;
+  font-family: 'Dela Gothic One', cursive;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Tektur', cursive;
     font-size: 2.5rem;
     color: #005f86;
 }
@@ -46,6 +49,9 @@ nav ul a {
 nav ul a:hover {
     color: #0d6efd;
     color: #ef9c26;
+}
+#SlideImg{
+    width: 100%;
 }
 
 nav button {
