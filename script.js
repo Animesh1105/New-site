@@ -11,7 +11,7 @@ const toggleBtn = document.querySelector('.menu')
 // BannerImage Slide
 const SlideImageElement = document.getElementById('SlideImg');
 
-const SlideImg = [{image:"volunteers.jpg"},{image:"travel.jpg"},{image:"school.jpg"}];
+const SlideImg = [{image:"images/volunteers2.jpg"},{image:"images/travel.jpg"},{image:"images/school.jpg"}];
 
 let currentIndex = 0;
 function UpdateImage (){
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviews = [
         { image: "https://assets-global.website-files.com/6422454f4b30ffcc2876c945/64375c0710e84f2be42752ea_felicity-yost.png", title: "John Hikens", content: "In a medical emergency, every minute counts. 24Local's hospital search feature saved the day by helping me locate the nearest emergency care facility. The real-time reviews from other users gave me confidence in my choice. This platform truly understands the importance of quick and reliable information during critical moments.", rating: 4 },
         { image: "https://profile.justdial.com/profileImg?i=hXNCPfK5Hd7gXBeDoSMU2CiU4HoPnPLeoysK2dXHTrk%3D", title: "Jane Doe", content: "In a medical emergency, every minute counts. 24Local's hospital search feature saved the day by helping me locate the nearest emergency care facility. The real-time reviews from other users gave me confidence in my choice. This platform truly understands the importance of quick and reliable information during critical moments.  ", rating: 5 },
-        { image: "alice.jpg", title: "Alice Smith", content: "Frequent traveler here, and 24Local has become my go-to for booking flights. The platform's intuitive design, coupled with a wide range of airlines and prices, makes it my preferred choice. The user reviews on airlines and airports provide valuable insights, ensuring a smooth and stress-free travel experience every time.", rating: 4 }
+        { image: "/images/alice.jpg", title: "Alice Smith", content: "Frequent traveler here, and 24Local has become my go-to for booking flights. The platform's intuitive design, coupled with a wide range of airlines and prices, makes it my preferred choice. The user reviews on airlines and airports provide valuable insights, ensuring a smooth and stress-free travel experience every time.", rating: 4 }
         // Add more reviews as needed
     ];
 
