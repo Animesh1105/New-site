@@ -1,10 +1,37 @@
+//Services dropdown menu
 const toggleBtn = document.querySelector('.menu')
         const dropDownMenu = document.querySelector('.dropdown-menu')
 
         toggleBtn.onclick = function(){
             dropDownMenu.classList.toggle('open')
-        }
+        };
+
        
+
+// BannerImage Slide
+const SlideImageElement = document.getElementById('SlideImg');
+
+const SlideImg = [{image:"volunteers.jpg"},{image:"travel.jpg"},{image:"school.jpg"}];
+
+let currentIndex = 0;
+function UpdateImage (){
+    const currentImg = SlideImg[currentIndex];
+    SlideImageElement.src = currentImg.image;
+    currentIndex = (currentIndex+1)%SlideImg.length;
+    // if (i == currentIndex){
+    //     currentImg.style.transform = "translateX(0)"
+    // }
+    // else{
+    //     currentImg.style.transform = "translateX(-100%)"
+    // }
+}
+
+UpdateImage();
+setInterval(()=>{
+    UpdateImage();
+}, 5000)
+
+
         // reviews Javascript
 document.addEventListener("DOMContentLoaded", function () {
     const reviewImageElement = document.getElementById('userReviewImage');
