@@ -100,8 +100,6 @@ a {
     z-index: 1;
     list-style: none;
     padding: 10px;
-    top: 110%;
-    /* Position the dropdown below the parent */
     left: 0;
     /* Align with the left edge of the parent */
     transition: opacity 0.3s ease-out;
