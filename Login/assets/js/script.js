@@ -61,9 +61,16 @@ submitBtn.addEventListener('click', (e) => {
 })
 
 async function login(){
-    const apiUrl = "https://api-production-55da.up.railway.app//login";
+    const apiUrl = "https://api-production-55da.up.railway.app/login";
     var email = document.getElementById("f-name").value;
     var password = document.getElementById("user-password").value;
+    alert(email);
+    alert(password);
+    const postData = {
+        "emailORnumber": email,
+        "password": password
+      };
+    
     const fetchOptions = {
         method: 'POST',
         headers: {
@@ -74,7 +81,9 @@ async function login(){
       };
       const response = await fetch(apiUrl, fetchOptions);
       if (!response.ok) {
-        document.getElementById("error-message").innerHTML = response.json().message;
+        const resJson = await response.json();
+        
+        document.getElementById("error-message").innerHTML = resJson.message;
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
       }
       const data = await response.text();
