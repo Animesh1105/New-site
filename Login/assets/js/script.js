@@ -57,5 +57,28 @@ submitBtn.addEventListener('click', (e) => {
             errorDisplayers[i].textContent = '*This field is Required'
         }
     }
-    
+
 })
+
+async function login(){
+    const apiUrl = "https://api-production-55da.up.railway.app//login";
+    var email = document.getElementById("f-name").value;
+    var password = document.getElementById("user-password").value;
+    const fetchOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // Set the content type based on your API requirements
+          // You may need to include additional headers (e.g., authorization) based on your API
+        },
+        body: JSON.stringify(postData) // Convert the data object to JSON
+      };
+      const response = await fetch(apiUrl, fetchOptions);
+      if (!response.ok) {
+        document.getElementById("error-message").innerHTML = response.json().message;
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+      const data = await response.text();
+      localStorage.setItem("tokken",data);
+      window.location.href = "/Login/afterlogin.html";
+
+}
