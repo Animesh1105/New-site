@@ -64,8 +64,7 @@ async function login(){
     const apiUrl = "https://api-production-55da.up.railway.app/login";
     var email = document.getElementById("f-name").value;
     var password = document.getElementById("user-password").value;
-    alert(email);
-    alert(password);
+  
     const postData = {
         "emailORnumber": email,
         "password": password

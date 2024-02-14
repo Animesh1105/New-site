@@ -80,3 +80,4 @@ document.addEventListener("DOMContentLoaded", function () {
         updateReview();
     }, 5000); // Set the interval time in milliseconds (5 seconds in this example)
 });
+
