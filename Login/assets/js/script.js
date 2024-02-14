@@ -57,4 +57,5 @@ submitBtn.addEventListener('click', (e) => {
             errorDisplayers[i].textContent = '*This field is Required'
         }
     }
+    
 })
