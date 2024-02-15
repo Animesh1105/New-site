@@ -58,3 +58,9 @@ submitBtn.addEventListener('click', (e) => {
         }
     }
 })
+
+
+async function register(){
+    var apiUrl = "https://api-production-55da.up.railway.app/register/consumer";
+       
+}
