@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/iciel-gotham');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'iCiel Gotham', sans-serif;
+                                                
+    /* background-color: #f6f6f6; */
+}
+body{
+    background-color: #186588;
+}
+
+nav {
+    display: flex;
+    background-color: white;
+    height: 68px;
+    padding: 11px;
+    padding-bottom: 0;
+    width: 100%;
+    /* margin-bottom: 10px; */
+}
+
+nav h1 {
+    font-family: 'Anton', sans-serif;
+    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Tektur', cursive;
+    font-size: 2.5rem;
+    color: #005f86;
+}
+
+nav ul {
+    position: absolute;
+    top: 27px;
+    left: 57%;
+    display: flex;
+    gap: 38px;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+nav ul a:hover {
+    color: #0d6efd;
+    color: #ef9c26;
+}
+
+nav button {
+    position: absolute;
+    left: 86%;
+    top: 12px;
+    padding: 11px 37px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+nav button:hover {
+    background-color: #503ff0;
+}
+
+/*DROPDOWN MENU*/
+.dropdown-menu li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: hsla(0, 0%, 100%, 0.9);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu.open {
+    height: 240px;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/*SERVICE DROPDOWN*/
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 10px;
+    left: 0;
+    /* Align with the left edge of the parent */
+    transition: opacity 0.3s ease-out;
+    /* Add transition effect */
+}
+
+.dropdown li {
+    padding: 10px;
+    display: block;
+    /* Ensure each list item is on a new line */
+}
+
+.dropdown-link {
+    position: relative;
+    /* Establish positioning context for absolute positioning */
+}
+
+.dropdown-link:hover .dropdown,
+.dropdown:hover {
+    display: block;
+    /* margin-top: 10px; */
+    opacity: 1;
+    /* Make the dropdown fully visible on hover */
+}
+
+.dropdown li:last-child {
+    white-space: nowrap;
+}
+
+.contact-heading{
+    margin-bottom: 21px;
+    text-align: center;
+    font-size: 40px;
+    color: #ef9c26;
+    font-weight: 600;
+    margin-top: 54px;
+}
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  #contact {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  #contact form {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  #contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #contact input,
+  #contact textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  #contact textarea {
+    height: 150px;
+  }
+  
+  #contact button {
+    /* grid-column: 1fr 2fr; */
+    margin-top: 20px;
+    background-color: #ef9c26;
+    color: white;
+    border: none;
+    /* border-radius: 5px; */
+    padding: 20px 66px;
+    cursor: pointer;
+    -moz-box-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  #contact button:hover {
+    background-color: #45a049;
+  }
+  
+  #form-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: green;
+  }
+  
+  #form-message.error {
+    color: red;
+  }
+  
+  #interface, #engagement, #privacy {
+    margin: 10px 0;
+  }
+
+  /* footer */
+footer{
+    margin-top: 100px;
+
+}
+  
+  .foot-panel1 {
+    /* background-color: #E5DED8; */
+    background-color: #171729;
+    /* color: black; */
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+  
+  .foot-panel2 {
+    /* background-color: #EEEAE6; */
+    background-color: #171729;
+    /* color: black; */
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly; 
+  }
+  
+  .foot-panel2 ul{
+    margin-top: 20px; 
+  }
+  
+  .foot-panel2 ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;  
+    /* color: black; */
+    color: white;
+  }
+  
+  .foot-panel3 {
+    /* background-color:#EEEAE6; */
+    background-color: #171729;
+    color: white;
+    border-top: 0.20px solid black;
+  }
+
