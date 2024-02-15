@@ -62,5 +62,44 @@ submitBtn.addEventListener('click', (e) => {
 
 async function register(){
     var apiUrl = "https://api-production-55da.up.railway.app/register/consumer";
-       
+       var name = document.getElementById("f-name").value;
+       var email = document.getElementById("mail").value;
+       var location = document.getElementById("loc").value;
+       var pincode = document.getElementById("pincode").value;
+       var password = document.getElementById("user-password").value;
+       var confirmPassword = document.getElementById("user-password-confirm").value;  
+       if(!(password === confirmPassword)){
+                      document.getElementById("error-message").innerHTML = "both the password should be same";
+                      return;
+         }
+
+       const postData = {
+        "password": password,
+        "email" : email,
+        "consumer_location" : location,
+        "name" : name,
+        "pin_code" : pincode
+      };
+   
+    const fetchOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // Set the content type based on your API requirements
+          // You may need to include additional headers (e.g., authorization) based on your API
+        },
+        body: JSON.stringify(postData) // Convert the data object to JSON
+      };
+      const response = await fetch(apiUrl, fetchOptions);
+      if (!response.ok) {
+        const resJson = await response.json();
+        
+        document.getElementById("error-message").innerHTML = resJson.message;
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+      const data = await response.text();
+      localStorage.setItem("tokken",data);
+      window.location.href = "/Login/afterlogin.html";
+
 }
+
+
