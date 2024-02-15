@@ -72,13 +72,7 @@
                     <div class="error"></div>
                 </div>
 
-                <div class="input-container">
-                    <label for="phone">
-                    </label>
-                    <input type="tel" name="phone" id="phone" required>
-                    <span>Phone</span>
-                    <div class="error"></div>
-                </div>
+                
                 <div class="input-container">
                     <label for="user-password"></label>
                     <input type="password" name="user-password" id="user-password" class="user-password" required>
@@ -94,9 +88,9 @@
                     </span>
                     <div class="error"></div>
                 </div>
-
+                     <h3 id = "error-message" style = "color: red;"></h3>
                 <div id="btm">
-                    <button type="submit" class="submit-btn">Create Account</button>
+                    <button type="button" onclick="register()" class="submit-btn">Create Account</button>
                     <p class="btm-text">
                         Already have an account..? <span class="btm-text-highlighted" onclick="window.location.href='/Login/index.html';">  Log in</span>
                         <!-- <a href="/Login/index.html"></a> -->
