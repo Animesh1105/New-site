@@ -81,3 +81,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000); // Set the interval time in milliseconds (5 seconds in this example)
 });
 
+async function changeLocation(){
+    var apiUrl = "https://api-production-55da.up.railway.app/changeLocation";
+      var newLocation = prompt("Enter new location");
+           
+       const postData = {
+       "tokken" : localStorage.getItem("tokken"),
+       "newLocation" : newLocation
+      };
+   
+    const fetchOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // Set the content type based on your API requirements
+          // You may need to include additional headers (e.g., authorization) based on your API
+        },
+        body: JSON.stringify(postData) // Convert the data object to JSON
+      };
+      const response = await fetch(apiUrl, fetchOptions);
+      if (!response.ok) {
+        const resJson = await response.json();
+        
+ 
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+    
+  
+
+}
+
+

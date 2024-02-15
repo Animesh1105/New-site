@@ -60,7 +60,10 @@ submitBtn.addEventListener('click', (e) => {
 
 })
 
+
+// used in logging in user in backend.
 async function login(){
+    document.getElementById("error-message").innerHTML = "";
     const apiUrl = "https://api-production-55da.up.railway.app/login";
     var email = document.getElementById("f-name").value;
     var password = document.getElementById("user-password").value;
@@ -88,5 +91,74 @@ async function login(){
       const data = await response.text();
       localStorage.setItem("tokken",data);
       window.location.href = "/Login/afterlogin.html";
+
+}
+
+
+//used for sending email in case password reset
+
+
+async function sendEmail(){
+    document.getElementById("error-message").innerHTML = "";
+    var email = document.getElementById("f-name").value;
+    var api = "https://api-production-55da.up.railway.app/resetPassword/" + email;
+    var res = await fetch(api);
+ 
+    if(!res.ok){
+
+        var jsonObj = await res.json();
+        document.getElementById("error-message").innerHTML = jsonObj.message;
+     
+      return;
+    }
+    
+    const data = await res.text();
+      localStorage.setItem("tokken",data);
+   
+      window.location.href = "/Login/OTP.html";
+    
+}
+
+
+
+//used to set new password for any consumer
+
+
+async function setPassword(){
+    document.getElementById("error-message").innerHTML = "";
+  var api = "https://api-production-55da.up.railway.app/newPassword";
+
+
+
+  var password = document.getElementById("user-password").value;
+  var confirmPassword = document.getElementById("user-password-confirm").value;
+  if(!(password === confirmPassword)){
+    document.getElementById("error-message").innerHTML = "Both of the above should be same";
+    return;
+  }
+
+  const postData = {
+    "token": localStorage.getItem("tokken"),
+    "newPassword": password
+  };
+
+const fetchOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json', // Set the content type based on your API requirements
+      // You may need to include additional headers (e.g., authorization) based on your API
+    },
+    body: JSON.stringify(postData) // Convert the data object to JSON
+  };
+  const response = await fetch(api, fetchOptions);
+  if (!response.ok) {
+    const resJson = await response.json();
+    
+    document.getElementById("error-message").innerHTML = resJson.message;
+    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+  }
+  const data = await response.text();
+  localStorage.setItem("tokken",data);
+  window.location.href = "/Login/afterlogin.html";
 
 }
