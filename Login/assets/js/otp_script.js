@@ -36,3 +36,53 @@ input.addEventListener("keyup", (e) => {
 });
 });
 window.addEventListener("load", () => inputs[0].focus());
+
+
+
+//otp verification
+
+
+async function verifyOtp(){
+  document.getElementById("error-message").innerHTML = "";
+ 
+  var api =  "https://api-production-55da.up.railway.app/otp/verify";
+
+
+var num1 = document.getElementById("num1").value;
+var num2 = document.getElementById("num2").value;
+var num3 = document.getElementById("num3").value;
+var num4 = document.getElementById("num4").value;
+var num5 = document.getElementById("num5").value;
+var num6 = document.getElementById("num6").value;
+
+var otp = num1 + num2 + num3 + num4 + num5 + num6;
+
+  const postData = {
+    "otp": otp,
+    "token" : localStorage.getItem("tokken")
+  };
+ 
+const fetchOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json', // Set the content type based on your API requirements
+      // You may need to include additional headers (e.g., authorization) based on your API
+    },
+    body: JSON.stringify(postData) // Convert the data object to JSON
+  };
+  const response = await fetch(api, fetchOptions);
+
+  if (!response.ok) {
+   
+    const resJson = await response.json();
+       
+    document.getElementById("error-message").innerHTML = resJson.message;
+ 
+    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+  }
+ 
+  const data = await response.text();
+  localStorage.setItem("tokken",data);
+  console.log(data);
+  window.location.href = "/Login/Reset_password.html";
+}
