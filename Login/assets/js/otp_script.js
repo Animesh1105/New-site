@@ -83,6 +83,6 @@ const fetchOptions = {
  
   const data = await response.text();
   localStorage.setItem("tokken",data);
-  console.log(data);
+  
   window.location.href = "/Login/Reset_password.html";
 }

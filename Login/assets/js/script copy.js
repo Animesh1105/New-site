@@ -106,8 +106,36 @@ async function changeLocation(){
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
       }
     
-  
+    }
 
+      async function doSearch(){
+        var apiUrl = "https://api-production-55da.up.railway.app/service";
+     
+             const query = document.getElementById("search-query").value;
+         const postData = {
+         "token" : localStorage.getItem("tokken"),
+         "query" : query
+        };
+        const fetchOptions = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json', // Set the content type based on your API requirements
+              // You may need to include additional headers (e.g., authorization) based on your API
+            },
+            body: JSON.stringify(postData) // Convert the data object to JSON
+          };
+          const response = await fetch(apiUrl, fetchOptions);
+          if (!response.ok) {
+            const resJson = await response.json();
+            
+            document.getElementById("error-message").innerHTML = resJson.message;
+            throw new Error(`Error: ${response.status} - ${response.statusText}`);
+          }
+          console.log(await response.json());
+        
+          localStorage.setItem("tokken",data);
+         //forward the api response to service page.
+          
 }
 
 
