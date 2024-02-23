@@ -92,7 +92,7 @@ span {
     outline: none;
     cursor: pointer;
 }
-[type="submit"]:hover{
+[type="button"]:hover{
     background-color: rgb(255, 255, 255) ;
     color: #ef9c26;
     border: 2px solid #ef9c26;
