@@ -80,6 +80,23 @@ span {
     font-size: 15px;
     transition: all .4s;
 }
+[type="submit"]{
+    border: 0;
+    background-color: #ef9c26;
+    color: rgb(0, 0, 0);
+    padding: 10px 106px;
+    letter-spacing: .05em;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 17px;
+    outline: none;
+    cursor: pointer;
+}
+[type="submit"]:hover{
+    background-color: rgb(255, 255, 255) ;
+    color: #ef9c26;
+    border: 2px solid #ef9c26;
+}
 [type="button"]{
     border: 0;
     background-color: #ef9c26;
@@ -97,6 +114,7 @@ span {
     color: #ef9c26;
     border: 2px solid #ef9c26;
 }
+
 form {
     width: auto;
     display: grid;
