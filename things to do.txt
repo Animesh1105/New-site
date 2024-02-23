@@ -1,0 +1,5 @@
+
+1) make an service.html page which will have the template of an service's div.
+2) make Log in enable for sellers.
+3) make reset password available for seller.
+4) make service booking available.
