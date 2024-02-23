@@ -28,7 +28,7 @@
                 <img src="./assets/images/dbl-arrow.png" alt="">
             </a>
         </div>
-        <form action="" method="">
+      
             <div class="form-container slideRight-animation">
     
                 <h1 class="form-header">
@@ -52,6 +52,7 @@
                         E-mail
                     </span>
                     <div class="error"></div>
+                    <h3 style = "color :rgb(255, 40, 40);" id = "error-message-email"></h3>
                 </div>
 
                 <div class="input-container">
@@ -73,7 +74,7 @@
 
                 <div class="input-container">
                     <label for="bu-name"></label>
-                    <input type="text" name="bu-name" id="bu-name" required>
+                    <input type="text" name="bu-name" id="shop-number" required>
                     <span>
                        Shop No/Building
                     </span>
@@ -82,7 +83,7 @@
 
                 <div class="input-container">
                     <label for="a-name"></label>
-                    <input type="text" name="a-name" id="a-name" required>
+                    <input type="text" name="a-name" id="area" required>
                     <span>
                         Area/Locality/Landmark
                     </span>
@@ -91,7 +92,7 @@
 
                 <div class="input-container">
                     <label for="p-name"></label>
-                    <input type="text" name="p-name" id="p-name" required>
+                    <input type="text" name="p-name" id="pincode" required>
                     <span>
                         Pincode
                     </span>
@@ -100,7 +101,7 @@
                 
                 <div class="input-container">
                     <label for="s-name"></label>
-                    <input type="text" name="s-name" id="s-name" required>
+                    <input type="text" name="s-name" id="state" required>
                     <span>
                         State
                     </span>
@@ -109,7 +110,7 @@
 
                 <div class="input-container">
                     <label for="ser-name"></label>
-                    <input type="text" name="ser-name" id="user-password-confirm" required>
+                    <input type="text" name="ser-name" id="service-type" required>
                     <span>
                        Service Type
                     </span>
@@ -123,24 +124,25 @@
                     <div class="error"></div>
                 </div>
 
-                <div class="input-container">
+                <div class="input-container" >
                     <label for="user-password-confirm"></label>
                     <input type="password" name="user-password-confirm" id="user-password-confirm" class="password-confirmation" required>
                     <span>
                         Confirm Password
                     </span>
                     <div class="error"></div>
+                    <h3 style = "color :rgb(255, 40, 40);" id = "error-message"></h3>
                 </div>
 
                 <div id="btm">
-                    <button type="submit" class="submit-btn">Create Account</button>
+                    <button type="submit" class="submit-btn" onclick="registerSeller()">Create Account</button>
                     <p class="btm-text">
                         Already have an account..? <span class="btm-text-highlighted" onclick="window.location.href='/Login/index.html';">  Log in</span>
                         <!-- <a href="/Login/index.html"></a> -->
                     </p>
                 </div>
             </div>
-        </form>
+       
     </main>
 
 </body>
