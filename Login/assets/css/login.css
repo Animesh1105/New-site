@@ -80,7 +80,7 @@ span {
     font-size: 15px;
     transition: all .4s;
 }
-[type="submit"]{
+[type="button"]{
     border: 0;
     background-color: #ef9c26;
     color: rgb(0, 0, 0);
