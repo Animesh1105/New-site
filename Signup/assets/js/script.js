@@ -48,6 +48,7 @@ async function registerSeller(){
     document.getElementById("error-message-email").innerHTML = ""; //resets warning
     document.getElementById("error-message").innerHTML = ""; //resets warning
     var name = document.getElementById("f-name").value;
+    console.log(name);
     var email = document.getElementById("mail").value;
     var phone = document.getElementById("phone").value;
 
@@ -79,7 +80,8 @@ const postData = {
     "service_type" : service,
     "shop_number" : shopNumber,
     "state" : state,
-    "phone_number" : phone 
+    "phone_number" : phone,
+    "seller_name" : name 
   };
   const fetchOptions = {
     method: 'POST',
