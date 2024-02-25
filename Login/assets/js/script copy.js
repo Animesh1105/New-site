@@ -131,10 +131,20 @@ async function changeLocation(){
             document.getElementById("error-message").innerHTML = resJson.message;
             throw new Error(`Error: ${response.status} - ${response.statusText}`);
           }
-          console.log(await response.json());
-        
+         var dataArray = await response.json();
+         dataArray = JSON.stringify(dataArray);
+        data = localStorage.getItem("tokken");
           localStorage.setItem("tokken",data);
+          localStorage.setItem("json",dataArray);
+          window.location.href = "/services.html";
          //forward the api response to service page.
+
+
+
+
+
+
+
           
 }
 
