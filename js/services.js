@@ -4,14 +4,14 @@
 
 dataArray = localStorage.getItem("json");
 dataArray = JSON.parse(dataArray);
-                 console.log(dataArray);
+                 
            // Assuming the API returns an array of JSON objects
            dataArray.forEach((data, index) => {
             // Iterate through each JSON object
-           var prevTags = document.getElementsByClassName("list-container").innerHTML;
+        
             console.log(`Object ${index + 1}:`, data);
           //  document.getElementsByClassName("list-container").innerHTML =  `<h1>  ${data.service_name} </h1>`;
-          document.getElementById("msg").innerText= data.service_name;
+         
             console.log('---'); // Separator for better readability
           });
       
@@ -45,10 +45,12 @@ async function doSearch(){
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
       }
       var jsonData = await response.json();
-      console.log(jsonData);
+   
+     jsonData = JSON.stringify(jsonData);
       localStorage.setItem("json",jsonData);
-    
+    data = localStorage.getItem("tokken");
       localStorage.setItem("tokken",data);
+      window.location.href = "/services.html";
      //forward the api response to service page.
       
 }
