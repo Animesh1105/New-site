@@ -8,7 +8,10 @@ dataArray = JSON.parse(dataArray);
            // Assuming the API returns an array of JSON objects
            dataArray.forEach((data, index) => {
             // Iterate through each JSON object
+           var prevTags = document.getElementsByClassName("list-container").innerHTML;
             console.log(`Object ${index + 1}:`, data);
+          //  document.getElementsByClassName("list-container").innerHTML =  `<h1>  ${data.service_name} </h1>`;
+          document.getElementById("msg").innerText= data.service_name;
             console.log('---'); // Separator for better readability
           });
       
@@ -51,6 +54,3 @@ async function doSearch(){
 }
 
 
-function doOrder(){
-    alert("Hiiii ");
-}
