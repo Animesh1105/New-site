@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Confirmation</title>
+    <link rel="stylesheet" href="Service_confirmation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Libre+Baskerville:wght@700&family=Tektur:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <!-- NAVBAR -->
+        <nav>
+            <h1>24Local</h1>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li class="dropdown-link">
+                    <a href="#">Services <img src="dropdown.png" alt=""></a>
+                    <ul class="dropdown">
+                        <li><a href="">Hospitals</a></li>
+                        <li><a href="">Schools</a></li>
+                        <li><a href="">Flight Booking</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <!-- AFTER LOGIN CODE  STARTS HERE -->
+            <img src="/Login/assets/images/user.png " class="user-pic" onclick="toggleMenu()">
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <!-- <img src="assets/images/user.png" alt=""> -->
+                    </div>
+                    <a href="" class="sub-menu-link">
+                        <img src="/Login/assets/images/service.png">
+                        <p>Service</p>
+                        <!-- <span>></span> -->
+                    </a>
+
+                    <a href="" class="sub-menu-link">
+                        <img src="/Login/assets/images/location.png">
+                        <p onlick="changelocation()">Change Location</p>
+                        <!-- <span>></span> -->
+                    </a>
+                </div>
+            </div>
+            <!-- <button>Log In</button> -->
+            <!-- <img width="40" class="menu" height="40" src="https://img.icons8.com/ios-filled/50/000000/menu--v6.png"
+                alt="menu--v6" /> -->
+            <!-- <img src="menu.png" class="menu" height="40" width="40" alt=""> -->
+            <div class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown-link">
+                    <a href="#">Services <img src="dropdown.png" alt=""></a>
+                    <ul class="dropdown">
+                        <li><a href="">Hospitals</a></li>
+                        <li><a href="">Schools</a></li>
+                        <li><a href="">Flight Booking</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+
+            </div>
+        </nav>
+        <div class="search-container">
+            <label for="search-box">Find</label>
+            <input type="search" id="search-query" class="search-box" placeholder="school, businesses, hospitals">
+
+            <button onclick="doSearch()">Search</button>
+        </div>
+        <div class="confirmation-container">
+            <div class="company-name">
+                <div class="left"><img
+                        src="https://cdn.apollohospitals.com/dev-apollohospitals/2021/06/AH_logo_v-60c8405cbca3d.svg"
+                        alt=""></div>
+                <div class="right">
+                    <h2>Apollo Hospitals</h2>
+                    <p>Plot # 13, Off Uran Road, Parsik Hill Rd, Sector 23, CBD Belapur, Navi Mumbai, Maharashtra 400614
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="confirm-message">
+                <span>Your Appointment has been Confirmed</span>
+            </div>
+            <div class="confirmation-content">
+                <div class="left-content">
+                    <img src="images/service_confirmed.png" alt="">
+                </div>
+                <div class="right-content">
+                    <div class="date-time">
+                        <p>Confirmed Time:</p>
+                        <p>Tuesday, February 28, 2024 at</p>
+                        <p>5:30PM</p>
+                    </div>
+                    <div class="name-address">
+                        <h4>Apollo Hospital</h4>
+                        <p>Sector 23, CBD Belapur,</p>
+                        <p>Navi Mumbai, Maharashtra 400614</p>
+                        <p>(022) 6280 6280</p>
+                    </div>
+                    <hr>
+                    <div class="details">
+                        <p>Appointment ID:</p>
+                        <p>Date:</p>
+                        <p>Time:</p>
+                        <p>Location:</p>
+                        <p>Doctor Name:</p>
+                        <p>Total Fees:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="list-container" id="list-container">
+         </div> -->
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="foot-panel1">
+            <a href="#" class="scroll-top">Back To Top</a>
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p> ABOUT </p>
+                <li><a href="/contactus.html">Contact Us</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+
+            <ul>
+                <p> HELP </p>
+                <li><a href="PaymentGateway/payment.html">Payment Option</a></li>
+                <li><a href="">Cancellation & Return</a></li>
+                <li><a href="">Report</a></li>
+            </ul>
+
+            <ul>
+                <p> SOCIAL </p>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">X</a></li>
+            </ul>
+
+            <ul>
+                <p> CONSUMER POLICY </p>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Security</a></li>
+                <li><a href="">Privacy</a></li>
+            </ul>
+
+            <!-- <div class="foot-panel3">
+    <img src="images\facebook.png" alt="facebook">
+
+  </div> -->
+
+        </div>
+
+        <!-- <div class="foot-panel3">
+    <img src="images\facebook.png" alt="facebook">
+
+  </div> -->
+
+
+        <!--edit-->
+        <div class="foot-panel4">
+            <li>Copyright @24 LOCAL </li>
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+
+    </footer>
+    <script>
+        // USER TOGGLE MENU
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        };
+    </script>
+</body>
+
+</html>
