@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="assets/css/afterlogin.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Libre+Baskerville:wght@700&family=Tektur:wght@600&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Libre+Baskerville:wght@700&family=Tektur:wght@600&display=swap"
+        rel="stylesheet">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
+
 <body>
     <div class="main">
         <!-- NAVBAR -->
@@ -37,23 +38,24 @@
             </ul>
             <!-- AFTER LOGIN CODE  STARTS HERE -->
             <img src="assets/images/user.png " class="user-pic" onclick="toggleMenu()">
-                <div class="sub-menu-wrap" id="subMenu">
-                    <div class="sub-menu">
-                        <div class="user-info">
-                            <!-- <img src="assets/images/user.png" alt=""> -->
-                        </div>
-                        <a href="" class="sub-menu-link">
-                            <img src="assets/images/service.png">
-                            <p>Service</p>
-                            <!-- <span>></span> -->
-                        </a>
-            
-                        <a href = "" class="sub-menu-link">
-                            <img src="assets/images/location.png">
-                            <p  onlick="changelocation()">Change Location</p>
-                            <!-- <span>></span> -->
-                        </a>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <!-- <img src="assets/images/user.png" alt=""> -->
                     </div>
+                    <a href="" class="sub-menu-link">
+                        <img src="assets/images/service.png">
+                        <p>Service</p>
+                        <!-- <span>></span> -->
+                    </a>
+
+                    <a href="" class="sub-menu-link">
+                        <img src="assets/images/location.png">
+                        <p onclick="changeLocation()">Change Location</p>
+                        <!-- <span>></span> -->
+                    </a>
+                </div>
+            </div>
             <img width="40" class="menu" height="40" src="https://img.icons8.com/ios-filled/50/000000/menu--v6.png"
                 alt="menu--v6" />
             <!-- <img src="menu.png" class="menu" height="40" width="40" alt=""> -->
@@ -90,7 +92,7 @@
             </div>
             <div class="search-container">
                 <label for="search-box">Find</label>
-                <input type="search" class="search-box" id = "search-query" placeholder="school, businesses, hospitals">
+                <input type="search" class="search-box" id="search-query" placeholder="school, businesses, hospitals">
                 <!-- <label for="search-box">Near</label>
                 <input type="search" class="search-box" placeholder="Kharghar, Navi Mumbai"> -->
                 <button onclick="doSearch()">Search</button>
@@ -189,7 +191,9 @@
                 <button>Enquire</button>
             </div>
             <div class="popular-cards">
-                <div class="card-image"><img src="https://lh3.googleusercontent.com/p/AF1QipPUmBpL8buCwBiivr09CNp3P-PFx4tGayYxbNhD=s680-w680-h510" alt="" class="card-img"></div>
+                <div class="card-image"><img
+                        src="https://lh3.googleusercontent.com/p/AF1QipPUmBpL8buCwBiivr09CNp3P-PFx4tGayYxbNhD=s680-w680-h510"
+                        alt="" class="card-img"></div>
                 <div class="popular-title">MITR Hospital</div>
                 <button>Enquire</button>
             </div>
@@ -214,7 +218,7 @@
                 <!-- <span>effortlessly orchestrated</span> -->
                 <p class="content-right">The platform for seamless exploration, featuring schools, colleges,
                     hospitals, and effortless flight bookings.
-                    
+
                 </p>
             </div>
         </div>
