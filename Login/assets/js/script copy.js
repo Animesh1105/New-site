@@ -109,6 +109,7 @@ async function changeLocation(){
     }
 
       async function doSearch(){
+        displayLoading();
         var apiUrl = "https://api-production-55da.up.railway.app/service";
      
              const query = document.getElementById("search-query").value;
@@ -141,6 +142,7 @@ async function changeLocation(){
 
 
 
+        
 
 
 
@@ -149,3 +151,11 @@ async function changeLocation(){
 }
 
 
+const loader = document.querySelector("#loading");
+      
+function displayLoading() {
+ console.log(loader);
+ loader.classList.add("display");
+ // to stop loading after some time
+
+}

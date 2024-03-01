@@ -9,10 +9,10 @@ dataArray = JSON.parse(dataArray);
            dataArray.forEach((data, index) => {
             // Iterate through each JSON object
         var prevTag = document.getElementById("list-container").innerHTML;
-            console.log(`Object ${index + 1}:`, data);
+          
           //  document.getElementsByClassName("list-container").innerHTML =  `<h1>  ${data.service_name} </h1>`;
            document.getElementById("list-container").innerHTML = prevTag +  "<div class='card dark' ><div class='card-body'><h2 class='card-title fw-bold'>" + data.service_name + "</h2><h5 class='card-text mt-2'>   " + data.area + " " + data.state + " " + data.pin_code + "</h5><div class='cta-section'><h5 class='round mt-3'>" + data.service_type + "</h5></ div>  <div class='Callbutton'><h7 class='Callbutton mt-4'>" + data.phone_number + "</h7><button class='Callbutton' id = " + data.seller_id + " onclick='book(this)'>Book Appointment</button></div></div></div>";
-            console.log('---'); // Separator for better readability
+          
           });
       
         }
@@ -21,11 +21,28 @@ dataArray = JSON.parse(dataArray);
 
 function book(event){
   var clickedElementId = event.id;
-  console.log("Clicked element ID: " + event.id);
+  
+  dataArray = localStorage.getItem("json");
+dataArray = JSON.parse(dataArray);
+                
+           // Assuming the API returns an array of JSON objects
+           dataArray.forEach((data, index) => {
+            if(data.seller_id === event.id){
+                 localStorage.setItem("tokken",localStorage.getItem("tokken"));
+              data = JSON.stringify(data);
+              localStorage.setItem("jsonObject",data);
+              localStorage.setItem("sellerId",event.id);
+              window.location.href = "Service_confirmation.html";
+              
+            }
+          });
+      
+
 }
 
 
 async function doSearch(){
+  displayLoading();
     var apiUrl = "https://api-production-55da.up.railway.app/service";
  
          const query = document.getElementById("search-query").value;
@@ -59,4 +76,11 @@ async function doSearch(){
       
 }
 
+      
+function displayLoading() {
+  const loader = document.querySelector("#loading");
 
+ loader.classList.add("display");
+ // to stop loading after some time
+
+}
