@@ -14,6 +14,7 @@
 </head>
 
 <body>
+ 
     <div class="main">
         <!-- NAVBAR -->
         <nav>
@@ -78,46 +79,26 @@
         </div>
         <div class="confirmation-container">
             <div class="company-name">
-                <div class="left"><img
-                        src="https://cdn.apollohospitals.com/dev-apollohospitals/2021/06/AH_logo_v-60c8405cbca3d.svg"
-                        alt=""></div>
+               
                 <div class="right">
-                    <h2>Apollo Hospitals</h2>
-                    <p>Plot # 13, Off Uran Road, Parsik Hill Rd, Sector 23, CBD Belapur, Navi Mumbai, Maharashtra 400614
+                    <h2 id = "heading"></h2>
+                    <p id = "service-provider"></p>
+                    <p id = "address">
                     </p>
+                 
+                    <p id = "contact-details"></p>
+                    <p id = "email-details"></p>
+                    <p id = "registration-date"></p>
                 </div>
+
             </div>
             <hr>
+            <div id = "loading"></div>
             <div class="confirm-message">
-                <span>Your Appointment has been Confirmed</span>
+                <span>Your Appointment will be placed after this Step</span>
             </div>
-            <div class="confirmation-content">
-                <div class="left-content">
-                    <img src="images/service_confirmed.png" alt="">
-                </div>
-                <div class="right-content">
-                    <div class="date-time">
-                        <p>Confirmed Time:</p>
-                        <p>Tuesday, February 28, 2024 at</p>
-                        <p>5:30PM</p>
-                    </div>
-                    <div class="name-address">
-                        <h4>Apollo Hospital</h4>
-                        <p>Sector 23, CBD Belapur,</p>
-                        <p>Navi Mumbai, Maharashtra 400614</p>
-                        <p>(022) 6280 6280</p>
-                    </div>
-                    <hr>
-                    <div class="details">
-                        <p>Appointment ID:</p>
-                        <p>Date:</p>
-                        <p>Time:</p>
-                        <p>Location:</p>
-                        <p>Doctor Name:</p>
-                        <p>Total Fees:</p>
-                    </div>
-                </div>
-            </div>
+           <input type = "text" id = "message" placeholder="Type a message to Service provider" required>
+           <button class ="confirmation-button" onclick="bookAppointment()"> Book Appointment</button>
         </div>
         <!-- <div class="list-container" id="list-container">
          </div> -->
@@ -181,7 +162,7 @@
         </div>
 
     </footer>
-    <script>
+    <script src = "js/confirmation.js">
         // USER TOGGLE MENU
         let subMenu = document.getElementById("subMenu");
 

@@ -221,4 +221,24 @@ a {
   .card:hover{
     background-color: #f8f8f8;
   }
-  
+  #loading {
+    width: 9rem;
+    height: 9rem;
+    border: 15px solid #f3f3f3;
+    border-top: 15px solid #9c41f2;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+#loading.display {
+    visibility: visible;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

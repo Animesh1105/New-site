@@ -63,6 +63,9 @@ submitBtn.addEventListener('click', (e) => {
 
 // used in logging in user in backend.
 async function login(){
+  const loader = document.querySelector("#loading");
+  
+  displayLoading(loader);
     document.getElementById("error-message").innerHTML = "";
     const apiUrl = "https://api-production-55da.up.railway.app/login";
     var email = document.getElementById("f-name").value;
@@ -86,7 +89,9 @@ async function login(){
         const resJson = await response.json();
         
         document.getElementById("error-message").innerHTML = resJson.message;
+        hideLoading(loader);
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      
       }
       const data = await response.text();
       localStorage.setItem("tokken",data);
@@ -161,4 +166,15 @@ const fetchOptions = {
   localStorage.setItem("tokken",data);
   window.location.href = "/Login/afterlogin.html";
 
+}
+
+      
+function displayLoading(loader) {
+  
+ loader.classList.add("display");
+ // to stop loading after some time
+
+}
+function hideLoading(loader) {
+  loader.classList.remove("display");
 }
