@@ -15,9 +15,8 @@ body {
 
 /* Login Code starts here */
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     min-height: 100vh;
     width: 1000%;
 }
