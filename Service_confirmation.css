@@ -166,7 +166,7 @@ input{
     border: 2px solid rgb(227, 229, 226);
     border-radius: 10px;
     padding: 35px;
-  width: 900px;
+    width: 88%;
     margin-right: 460px;
     margin-top: 32px;
 }
@@ -177,6 +177,8 @@ input{
     margin-right: 460px;
     margin-top: 32px;
     cursor: pointer;
+    color: white;
+    border: none;
 }
 .search-container button {
     padding: 8px 37px 10px 36px;
